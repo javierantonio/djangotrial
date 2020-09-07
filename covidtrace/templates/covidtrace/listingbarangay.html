@@ -32,9 +32,10 @@
                                                         <td>{{ barangay.estpop }}</td>
                                                         <td>{{ barangay.remarks }}</td>
                                                         <td><a class = "btn btn-primary waves-effect waves-light btn-info" href = "{% url 'update_barangay' barangay.id %}">
-                                                        <i class="mdi mdi-delete-circle"></i>
+                                                        <i class="mdi mdi-update"></i>
                                                         Update</a></td>
-                                                        <td><a class = "btn btn-primary waves-effect waves-light btn-danger" href = "{% url 'delete_barangay' barangay.id %}"><i class="mdi mdi-update"></i>
+                                                        <td><a class = "btn btn-primary waves-effect waves-light btn-danger" href = "{% url 'delete_barangay' barangay.id %}">
+                                                        <i class="mdi mdi-delete-circle"></i>
                                                         Delete</a>
                                                         </td>
                                                     </tr>
