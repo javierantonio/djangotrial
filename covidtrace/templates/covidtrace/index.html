@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>CoViD19 City Municipality</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+
+        <link rel="shortcut icon" href="{% static '/assets/images/favicon.ico' ">
+        <link href="{% static '/assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/metismenu.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/icons.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+
+            {% include 'covidtrace/topbar.html' %}
+
+            <!-- Top Bar End -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            {% include 'covidtrace/navbar.html' %}
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Contact Tracing</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">ITP25533Z</a></li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        {% block content %}
+
+                        {%endblock %}
+
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2018 Agroxa <span class="d-none d-sm-inline-block">- Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
+                </footer>
+
+            </div>
+
+
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+            
+
+        <!-- jQuery  -->
+        <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/assets/js/metisMenu.min.js' %}"></script>
+        <script src="{% static '/assets/js/jquery.slimscroll.js' %}"></script>
+        <script src="{% static '/assets/js/waves.min.js' %} "></script>
+
+        <script src="../plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+        <!-- App js -->
+        <script src="{% static '/assets/js/app.js' %}"></script>
+
+    </body>
+
+</html>
