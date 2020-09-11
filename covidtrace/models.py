@@ -28,7 +28,6 @@ class Barangay (models.Model):
      blevel = models.IntegerField(null= True)
      remarks = models.CharField(max_length= 500, null= True)
 
-     cities = models.cho
      def __str__(self):
          return self.bname
 
