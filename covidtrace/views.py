@@ -21,9 +21,6 @@ def citymunicipality(request):
             form.save()
             return redirect('/')
 
-        else:
-            print("error")
-
 
     return render(request, 'covidtrace/citymunicipality.html', context)
 
@@ -53,9 +50,6 @@ def barangay(request):
             messages.success(request, 'Form submission successful')
             return redirect('/')
 
-        else:
-            print("error")
-
 
     return render(request, 'covidtrace/barangay.html', context)
 
@@ -72,8 +66,7 @@ def update_Barangay(request, pk):
             messages.success(request, 'Form submission successful')
             return redirect('/')
 
-    context = {'form': form}
-    return render(request, 'covidtrace/barangay.html', context)
+    return render(request, 'covidtrace/barangay.html')
 
 
 def delete_Barangay (request, pk):

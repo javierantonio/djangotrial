@@ -1,17 +1,8 @@
 from django.db import models
 
 # Create your models here.
+from django.forms import ModelChoiceField
 
-class Barangay (models.Model):
-     bname = models.CharField(max_length= 250, null= True)
-     latitude = models.FloatField(max_length= 12, null= True)
-     longitude = models.FloatField(max_length= 12, null= True)
-     estpop = models.IntegerField(null= True)
-     blevel = models.IntegerField(null= True)
-     remarks = models.CharField(max_length= 500, null= True)
-
-     def __str__(self):
-         return self.bname
 
 class Citymun (models.Model):
     cmdesc = models.CharField(max_length= 250, null= True)
@@ -28,3 +19,16 @@ class Citymun (models.Model):
 
     def __str__(self):
         return self.cmdesc
+
+class Barangay (models.Model):
+     bname = models.CharField(max_length= 250, null= True)
+     latitude = models.FloatField(max_length= 12, null= True)
+     longitude = models.FloatField(max_length= 12, null= True)
+     estpop = models.IntegerField(null= True)
+     blevel = models.IntegerField(null= True)
+     remarks = models.CharField(max_length= 500, null= True)
+
+     cities = models.cho
+     def __str__(self):
+         return self.bname
+
