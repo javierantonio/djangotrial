@@ -1,13 +1,9 @@
 Submitted by Jave Allan Billones
 
-Made with DJango Python framework with MVC Structure
+With Framework Version
 
-How to run:
-
-	1. Copy directory of this project ('e.g. C:\Users\FX553VD\Desktop\Test Project Front-End\attempt1 '
-	2. Install Python and Django
-	3. In command prompt, change the directory of command prompt to this folder
-	4. The home for the project is in the direcctory 'localhost:8000'
-	5. To access the admin of django, the directory is 'localhost:8000/admin' the username is 'user' and password is 'root'
-	6. Program is now accessible
-	
+	- open the folder attempt1
+	- launch the 'run.bat' file
+	- after launching, it will automatically installs all necessary files and content for the project
+	- Google Chrome should automatically open with 2 tabs, 1 for the admin and 1 for the main program
+	- Username is 'user' and password is 'password' in case of logouts and login
