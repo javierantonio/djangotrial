@@ -1,0 +1,72 @@
+{% extends 'covidtrace/loginregister.html' %}
+
+{% load widget_tweaks %}
+
+{% load static %}
+
+{% block content %}
+
+        <!-- Background -->
+        <div class="account-pages"></div>
+
+        <!-- Begin page -->
+        <div class="wrapper-page">
+            <div class="card">
+                <div class="card-body">
+
+                    <h3 class="text-center m-0">
+                        <a href="index.html" class="logo logo-admin"><img src="{% static '/assets/images/logo.png' %}" height="30" alt="logo"></a>
+                    </h3>
+
+                    <div class="p-3">
+                        <h4 class="text-muted font-18 m-b-5 text-center">Free Register</h4>
+                        <p class="text-muted text-center">Get your free Agroxa account now.</p>
+
+                        <form class="form-horizontal m-t-30" action="" method="POST">
+
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                <label for="">Username</label>
+                                {% render_field form.username class="form-control" placeholder="User Name" %}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                {% render_field form.password1 class="form-control" placeholder="Password" %}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Confirm Password</label>
+                                {% render_field form.password2 class="form-control" placeholder="Confirm Password" %}
+                            </div>
+
+                            <div class="form-group row m-t-20">
+                                <div class="col-12 text-right">
+                                    <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Register</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-t-10 mb-0 row">
+                                <div class="col-12 m-t-20">
+                                    <p class="font-14 text-muted mb-0">By registering you agree to the Agroxa <a href="#" class="text-primary">Terms of Use</a></p>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            {{form.errors}}
+            
+            <div class="m-t-40 text-center">
+                <p class="text-muted">Already have an account ? <a href="{% url 'login' %}" class="text-white"> Login </a> </p>
+                <p class="text-muted">© 2018 Agroxa. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+            </div>
+        </div>
+
+        <!-- END wrapper -->
+            
+{% endblock %}

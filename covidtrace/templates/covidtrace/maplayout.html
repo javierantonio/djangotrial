@@ -1,0 +1,117 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>CoViD19 City Municipality</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+
+        <link rel="shortcut icon" href="{% static '/assets/images/favicon.ico' ">
+        <link href="{% static '/assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/metismenu.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/icons.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/style.css' %}" rel="stylesheet" type="text/css">
+
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+
+            {% include 'covidtrace/topbar.html' %}
+
+            <!-- Top Bar End -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+
+            {% include 'covidtrace/navbar.html' %}
+
+
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+
+            <!-- ============================================================== -->
+
+
+
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Contact Tracing</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">ITP25533Z</a></li>
+                                    </ol>
+
+                                </div>
+
+                                <div class="dropdown pt-3 d-inline-block">
+                                <a class="btn btn-header waves-effect waves-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All 
+                                </a>
+                                
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 52px, 0px);">
+                                    <a class="dropdown-item" name="all">All</a>
+                                    <a class="dropdown-item" name="cities">Cities</a>
+                                    <a class="dropdown-item" name="municipalities">Municipalities</a>
+                                </div>
+                            </div>
+                                <iframe src="{% url 'mapy' %}" width="100%" height="600"> </iframe>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2018 Agroxa <span class="d-none d-sm-inline-block">- Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
+                </footer>
+
+            </div>
+
+
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+            
+
+        <!-- jQuery  -->
+        <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/assets/js/metisMenu.min.js' %}"></script>
+        <script src="{% static '/assets/js/jquery.slimscroll.js' %}"></script>
+        <script src="{% static '/assets/js/waves.min.js' %} "></script>
+
+
+        <!-- App js -->
+        <script src="{% static '/assets/js/app.js' %}"></script>
+
+    </body>
+
+</html>

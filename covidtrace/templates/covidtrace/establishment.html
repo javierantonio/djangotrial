@@ -1,0 +1,92 @@
+{% extends 'covidtrace/index.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+
+
+                        <div class="page-content-wrapper">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card m-b-20">
+                                        <div class="card-body">
+
+                                            <h4 class="mt-0 header-title">Establishment Creation Form</h4>
+                                            <br>
+
+
+
+                                                <form action = "" method="POST">
+
+                                                        {% csrf_token %}
+                                                        {% render_field form.establishment_id class="col-sm-10 form-control" placeholder="Establishment ID" required="True" hidden="True" value="0507" %}
+
+
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-2 col-form-label">Establishment Name</label>
+                                                            <div class="col-sm-10">
+                                                            {% render_field form.establishment_name class="col-sm-10 form-control" placeholder="Establishment Name" required="True" %}
+                                                        </div>
+                                                     </div>
+
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-2 col-form-label">Establishment Type</label>
+                                                        <div class="col-sm-10">
+                                                            {% render_field form.establishment_type class="col-sm-10 form-control" placeholder="Establishment Type" required="True" %}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label  class="col-sm-2 col-form-label">Barangay</label>
+                                                        <div class="col-sm-10">
+                                                            {% render_field form.establishment_barangay class="col-sm-10 form-control" placeholder="Establishment Barangay" required="True" %}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-2 col-form-label">City/Municipality</label>
+                                                        <div class="col-sm-10">
+                                                            {% render_field form.establishment_citymun class="col-sm-10 form-control" placeholder="City/Municipality" required="True" %}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-2 col-form-label">Establishment Owner</label>
+                                                        <div class="col-sm-10">
+                                                            {% render_field form.establishment_owner_name class="col-sm-10 form-control" placeholder="Establishment Owner" required="True" %}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-2 col-form-label">Owner ID</label>
+                                                        <div class="col-sm-10">
+                                                            {% render_field form.establishment_owner_id class="col-sm-10 form-control" placeholder="Owner ID" required="True" %}
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light" onclick="return confirm('Are you sure?');">
+                                                            Save
+                                                        </button>
+
+                                                        <a class="btn btn-secondary waves-effect m-l-5"  href = "{% url 'listingbarangay' %}">
+                                                            Listing
+                                                        </a>
+                                                    </div>
+
+                                                </form>
+
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end col -->
+                            </div> <!-- end row -->
+
+                        </div>
+                        <!-- end page content-->
+
+{% endblock %}

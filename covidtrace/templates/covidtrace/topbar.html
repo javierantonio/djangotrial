@@ -1,0 +1,46 @@
+{% load static %}
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <a href="{% url 'home' %}" class="logo">
+                        <span>
+                            <img src="{% static '/assets/images/logo.png' %}" alt="" height="90" width = "90">
+                            <span class="float-center"><h6>Contact Tracing</h6></span>
+                        </span>
+                        <i>
+                            <img src="{% static '/assets/images/logo.png' %}" alt="" height="50">
+                        </i>
+                    </a>
+                </div>
+
+                <nav class="navbar-custom">
+
+                    <ul class="navbar-right d-flex list-inline float-right mb-0">        
+
+                        <li class="dropdown notification-list">
+                            <div class="dropdown notification-list nav-pro-img">
+                                <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="{% static '/assets/images/users/user-4.jpg' %}" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="{% url 'logout' %}"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                </div>                                                                    
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left waves-effect waves-light">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
